@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마음챙김 온라인 웨비나 신청</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/eventform.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">숨</div>
+            <ul class="nav-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="events.html" class="active">행사일정</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="eventform-section">
+            <div class="eventform-box">
+                <h1>마음챙김 온라인 웨비나</h1>
+                <p>2025년 5월 2일 | 온라인<br>누구나 참여 가능한 무료 웨비나입니다.<br>마음챙김 실습, Q&A, 실시간 채팅 등 다양한 프로그램이 준비되어 있습니다.</p>
+                <form class="eventform-form">
+                    <div class="form-group"><label for="name">이름 *</label><input type="text" id="name" required></div>
+                    <div class="form-group"><label for="email">이메일 *</label><input type="email" id="email" required></div>
+                    <div class="form-group"><label for="role">직책 *</label><input type="text" id="role" required></div>
+                    <div class="form-group"><label for="company">회사명 *</label><input type="text" id="company" required></div>
+                    <button type="submit" class="cta-button">신청하기</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 숨. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+    document.querySelector('.eventform-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('신청이 완료되었습니다!');
+        this.reset();
+    });
+    </script>
+</body>
+</html> 

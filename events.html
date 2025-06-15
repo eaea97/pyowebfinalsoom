@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숨 - 행사일정</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/events.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">숨</div>
+            <ul class="nav-links">
+                <li><a href="index.html">홈</a></li>
+                <li class="dropdown active"><a href="#" class="dropdown-toggle active"><span>커뮤니티</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="blog.html">블로그</a></li>
+                        <li><a href="events.html" class="active">행사일정</a></li>
+                        <li><a href="stories.html">고객 이야기</a></li>
+                        <li><a href="research.html">연구자료</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="events-header">
+            <h1>행사일정</h1>
+            <p>다가오는 명상 행사와 웨비나를 확인하세요.</p>
+        </section>
+        <section class="events-list">
+            <a href="event1.html" class="event-link">
+                <article class="event-card">
+                    <img src="assets/img/date/date1.jpg" alt="명상 워크숍">
+                    <div class="event-info">
+                        <h2>2025 봄 명상 워크숍</h2>
+                        <p>2025년 4월 10일 | 서울</p>
+                        <p>전문가와 함께하는 오프라인 명상 워크숍</p>
+                    </div>
+                </article>
+            </a>
+            <a href="event2.html" class="event-link">
+                <article class="event-card">
+                    <img src="assets/img/date/date2.jpg" alt="온라인 웨비나">
+                    <div class="event-info">
+                        <h2>마음챙김 온라인 웨비나</h2>
+                        <p>2025년 5월 2일 | 온라인</p>
+                        <p>누구나 참여 가능한 무료 웨비나</p>
+                    </div>
+                </article>
+            </a>
+        </section>
+
+        <!-- 행사 상세/신청 모달 1 -->
+        <div class="modal-overlay" id="modal-event1" tabindex="-1" aria-modal="true" role="dialog">
+            <div class="modal-content event-modal-content">
+                <button class="modal-close" aria-label="닫기">&times;</button>
+                <h3>2025 봄 명상 워크숍</h3>
+                <p>2025년 4월 10일 | 서울<br>전문가와 함께하는 오프라인 명상 워크숍입니다.<br>명상 실습, 강연, 네트워킹 등 다양한 프로그램이 준비되어 있습니다.</p>
+                <form class="event-form">
+                    <div class="form-group"><label for="name1">이름 *</label><input type="text" id="name1" required></div>
+                    <div class="form-group"><label for="email1">이메일 *</label><input type="email" id="email1" required></div>
+                    <div class="form-group"><label for="role1">직책 *</label><input type="text" id="role1" required></div>
+                    <div class="form-group"><label for="company1">회사명 *</label><input type="text" id="company1" required></div>
+                    <button type="submit" class="cta-button">신청하기</button>
+                </form>
+            </div>
+        </div>
+        <!-- 행사 상세/신청 모달 2 -->
+        <div class="modal-overlay" id="modal-event2" tabindex="-1" aria-modal="true" role="dialog">
+            <div class="modal-content event-modal-content">
+                <button class="modal-close" aria-label="닫기">&times;</button>
+                <h3>마음챙김 온라인 웨비나</h3>
+                <p>2025년 5월 2일 | 온라인<br>누구나 참여 가능한 무료 웨비나입니다.<br>마음챙김 실습, Q&A, 실시간 채팅 등 다양한 프로그램이 준비되어 있습니다.</p>
+                <form class="event-form">
+                    <div class="form-group"><label for="name2">이름 *</label><input type="text" id="name2" required></div>
+                    <div class="form-group"><label for="email2">이메일 *</label><input type="email" id="email2" required></div>
+                    <div class="form-group"><label for="role2">직책 *</label><input type="text" id="role2" required></div>
+                    <div class="form-group"><label for="company2">회사명 *</label><input type="text" id="company2" required></div>
+                    <button type="submit" class="cta-button">신청하기</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 숨. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

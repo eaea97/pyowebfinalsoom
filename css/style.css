@@ -1,0 +1,233 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #7C9A92;
+    --secondary-color: #E8F1F2;
+    --accent-color: #4A6B6A;
+    --text-color: #2C3E50;
+    --background-color: #F5F5F5;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* Main content */
+main {
+    margin-top: 80px;
+    min-height: calc(100vh - 160px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Common Components */
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Card styles */
+.feature-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 드롭다운 메뉴 */
+.nav-links .dropdown {
+    position: relative;
+}
+.dropdown-toggle::after {
+    content: '▼';
+    font-size: 0.7em;
+    margin-left: 0.3em;
+    vertical-align: middle;
+    color: var(--primary-color);
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 0.7rem 0;
+    z-index: 2001;
+    list-style: none;
+}
+.dropdown-menu li {
+    width: 100%;
+}
+.dropdown-menu a {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.18s, color 0.18s;
+}
+.dropdown-menu a:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+/* 드롭다운 활성화 */
+.nav-links .dropdown:hover .dropdown-menu,
+.nav-links .dropdown:focus-within .dropdown-menu,
+.nav-links .dropdown.active .dropdown-menu {
+    display: block;
+}
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0.2rem 0;
+    }
+    .dropdown-menu a {
+        padding: 0.8rem 2rem;
+    }
+}
+
+/* 헤더/네비게이션 바 어두운 배경 + 흰색 글씨 */
+#header, #header .navbar, #header .navbar ul {
+  background: #111 !important;
+}
+#header .navbar a,
+#header .navbar .dropdown > a {
+  color: #fff !important;
+}
+#header .navbar a:hover,
+#header .navbar .active,
+#header .navbar .dropdown ul a:hover {
+  color: var(--primary-color) !important;
+}
+
+/* 네비게이션 메뉴 중앙 정렬 */
+#header .container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+}
+#header .logo {
+  margin-right: 2.5rem;
+}
+#header .navbar {
+  flex: 1;
+  justify-content: center !important;
+}
+
+/* 드롭다운 항상 열림 (active 클래스 있을 때) */
+#header .navbar .dropdown.active > ul,
+#header .navbar .dropdown:hover > ul,
+#header .navbar .dropdown:focus-within > ul {
+  display: block;
+} 

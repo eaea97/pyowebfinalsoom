@@ -1,0 +1,302 @@
+.hero {
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/meditation-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 4rem 5%;
+    background-color: var(--secondary-color);
+}
+
+.feature-card {
+    text-align: center;
+}
+
+.feature-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 2rem 5%;
+    }
+}
+
+/* 명상 선택 카드 섹션 */
+.headspace-section {
+    margin: 0 auto;
+    padding: 3rem 5% 2rem 5%;
+    text-align: center;
+}
+.headspace-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+.headspace-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.headspace-card {
+    background: #fff;
+    border: 2px solid var(--secondary-color);
+    border-radius: 16px;
+    padding: 2rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: border 0.2s, box-shadow 0.2s, transform 0.2s;
+    outline: none;
+}
+.headspace-card:focus,
+.headspace-card:hover {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 16px rgba(124,154,146,0.10);
+    transform: translateY(-2px) scale(1.02);
+}
+.headspace-card .icon {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+/* 모달 스타일 */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+.modal-overlay.active {
+    display: flex;
+}
+.modal-content {
+    background: #fff;
+    color: #222;
+    border-radius: 24px;
+    padding: 2.5rem 0 2rem 0;
+    max-width: 400px;
+    width: 90vw;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    position: relative;
+    text-align: center;
+    animation: modalPop 0.2s;
+}
+@keyframes modalPop {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.modal-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+.modal-content p {
+    margin-bottom: 1.2rem;
+    color: #333;
+}
+.modal-content audio {
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+.modal-desc {
+    background: #fff !important;
+    opacity: 1 !important;
+    border-radius: 16px;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+.modal-close {
+    position: absolute;
+    top: 56.2px;
+    right: 9px;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+.modal-close:hover {
+    color: var(--accent-color);
+}
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+        max-width: 95vw;
+    }
+    .headspace-section {
+        padding: 2rem 2vw 1rem 2vw;
+    }
+    .headspace-card {
+        padding: 1.2rem 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Outcomes 섹션 */
+.outcomes-section {
+    margin: 0 auto;
+    padding: 3rem 5% 2rem 5%;
+    text-align: center;
+}
+.outcomes-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+.outcomes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.outcome-card {
+    background: #faf7f2;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 260px;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.outcome-card:hover {
+    box-shadow: 0 6px 24px rgba(124,154,146,0.10);
+    transform: translateY(-2px) scale(1.02);
+}
+.outcome-number {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #ff8000;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+.outcome-emoji {
+    font-size: 1.5rem;
+    margin-left: 0.2em;
+}
+.deco-1 { color: #ff8000; }
+.deco-2 { color: #ff8000; }
+.deco-3 { color: #ff8000; }
+.outcome-desc p {
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 0.7rem;
+}
+.outcome-desc a {
+    color: var(--primary-color);
+    font-size: 0.98rem;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+.outcome-desc a:hover {
+    color: var(--accent-color);
+}
+@media (max-width: 700px) {
+    .outcomes-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .outcome-card {
+        min-height: 180px;
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+    }
+    .outcome-number {
+        font-size: 2.5rem;
+    }
+}
+
+/* 서비스 소개 영상 섹션 */
+.how-section {
+    margin: 0 auto;
+    padding: 3rem 5% 2rem 5%;
+    text-align: center;
+}
+.how-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+.how-video-container {
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.how-video-container iframe {
+    width: 100%;
+    height: 360px;
+    border: none;
+    display: block;
+}
+@media (max-width: 700px) {
+    .how-video-container iframe {
+        height: 200px;
+    }
+} 

@@ -1,0 +1,70 @@
+.videos-header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--secondary-color);
+}
+
+.videos-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 비율 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-info {
+    padding: 1.5rem;
+}
+
+.video-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.video-info p {
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .videos-header {
+        padding: 2rem 1rem;
+    }
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem 5%;
+    }
+} 

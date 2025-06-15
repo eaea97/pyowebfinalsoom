@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숨 - 구독하기</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/subscribe.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">숨</div>
+            <ul class="nav-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="experts.html">전문가</a></li>
+                <li><a href="map.html">명상 지도</a></li>
+                <li><a href="content.html">명상 콘텐츠</a></li>
+                <li><a href="videos.html">비디오</a></li>
+                <li><a href="subscribe.html" class="active">구독하기</a></li>
+                <li class="dropdown"><a href="#"><span>커뮤니티</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="blog.html">블로그</a></li>
+                        <li><a href="events.html">행사일정</a></li>
+                        <li><a href="stories.html">고객 이야기</a></li>
+                        <li><a href="research.html">연구자료</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="subscribe-header">
+            <h1>구독하기</h1>
+            <p>새로운 명상 콘텐츠를 받아보세요</p>
+        </section>
+
+        <section class="subscribe-form">
+            <div class="form-container">
+                <form id="subscribeForm">
+                    <div class="form-group">
+                        <label for="email">이메일 주소</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">이름</label>
+                        <input type="text" id="name" name="name" required placeholder="홍길동">
+                    </div>
+                    <div class="form-group">
+                        <label>관심 분야</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="interests" value="morning"> 단체 명상
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="stress"> 스트레스 해소
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="sleep"> 수면 명상
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interests" value="morning"> 뉴스레터
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-button">구독하기</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 숨. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
