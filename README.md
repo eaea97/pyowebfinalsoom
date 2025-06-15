@@ -18,20 +18,11 @@
 
 ## 설치 및 실행
 
-1. 저장소 클론
-```bash
-git clone [repository-url]
-```
-
-2. 웹 서버 실행
-```bash
-# 로컬 서버 실행 (예: Live Server VS Code 확장 프로그램 사용)
-```
+폴더를 불러와 index.html 파일로 실행합니다.
 
 ## 배포
 
-이 프로젝트는 Vercel을 통해 배포되었습니다.
-- 프로덕션 URL: [배포된 URL]
+깃허브로 불러와서 vercel로 배포합니다.
 
 ## 라이선스
 
